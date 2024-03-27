@@ -22,13 +22,15 @@
 |                                         |                                          |
 |                                         |                                          |
 
+<div style="page-break-after: always"></div>
+
 ### I2C  Test Pattern
 
 | Item                              | Result                                     |
 | --------------------------------- | ------------------------------------------ |
 | [Read/Write Test](#Device Address Check) | <span style="color:green"> **Pass**</span> |
 | [Write/Read Data to Register Check](# Write/Read Data to Register Check) | <span style="color:red"> **Fail**</span>   |
-| <a href="#Write/Read Data to Register Check">Write/Read Data to Register Check</a> |                                            |
+|  |                                            |
 
 #### Device Address Check
 
