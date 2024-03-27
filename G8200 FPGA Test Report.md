@@ -16,7 +16,19 @@
 
 ## Test Item
 
+| Item                                    | Result                                   |
+| --------------------------------------- | ---------------------------------------- |
+| [I2C  Test Pattern](#I2C  Test Pattern) | <span style="color:red"> **Fail**</span> |
+|                                         |                                          |
+|                                         |                                          |
+
 ### I2C  Test Pattern
+
+| Item                              | Result                                     |
+| --------------------------------- | ------------------------------------------ |
+| [Read/Write Test](#Device Address Check) | <span style="color:green"> **Pass**</span> |
+| [Write/Read Data to Register Check](# Write/Read Data to Register Check) | <span style="color:red"> **Fail**</span>   |
+|         |                                            |
 
 #### Device Address Check
 
@@ -24,13 +36,13 @@
 
 - Action :Read register 0  from device Address 0~127. 
 - Check: If there is any response from the address other than 0X48
-- Result: Pass
+- Result: <span style="color:green"> **Pass**</span>
 
-​	 [Test Log](test_device_address.txt)
+​	 [Test Log](file:///Wss//Motor/test_device_address.txt)
 
-#### Write/Read Data to Register Check
+##### Write/Read Data to Register Check
 
-##### 確認暫存器寫入功能
+###### 確認暫存器寫入功能
 
 - Action: 
   - 對 Register 0x00~0x0xFF 開始執行單筆寫入 1byte 到 256byte
@@ -64,10 +76,10 @@
     ```
     
 
-  Write REG 0XF0 = 0X01
+  Write REG 0XF0 = 0X01. <span style="color:green">**PASS**</span>
 	<img src="assets\write_reg0XF0.png" alt="write_reg0xF0" style="zoom:50%;" />
 
-  Write REG 0XF1 = 0X01. No ACK.
+  Write REG 0XF1 = 0X01 after write REG0XF0. <span style="color:red">**No ACK**</span>
 	<img src="assets\write_reg0XF1_after_0XF0.png" style="zoom:50%;" />
 
 - Note: 
